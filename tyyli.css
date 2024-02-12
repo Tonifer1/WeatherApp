@@ -1,0 +1,41 @@
+.highlight {
+    background-color:aqua;
+  }
+
+  .highlight2 {
+    background-color:lightgreen;
+  }
+
+  #myTable {
+    background-color: lightgreen;
+    color: black;
+    padding: 30px;
+    text-align: center;
+  }
+
+  #forecastTable{
+    background-color: lightgreen;
+    color: black;
+    padding: 30px;
+    text-align: center;
+  }
+  .button {
+    background-color:black; 
+    border: 2px solid #04AA6D;
+    color: white;
+    padding: 6px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: green;
+    color: white;
+}
+
+
