@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 function loadWeatherData(city) {
     $.ajax({
         url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=d493fdf9dabb2c2a8d6f2e1917f28438&units=metric',
