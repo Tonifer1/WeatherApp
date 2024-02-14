@@ -1,24 +1,4 @@
-.highlight {
-    background-color:aqua;
-  }
 
-  .highlight2 {
-    background-color:lightgreen;
-  }
-
-  #myTable {
-    background-color: lightgreen;
-    color: black;
-    padding: 30px;
-    text-align: center;
-  }
-
-  #forecastTable{
-    background-color: lightgreen;
-    color: black;
-    padding: 30px;
-    text-align: center;
-  }
   .button {
     background-color:black; 
     border: 2px solid #04AA6D;

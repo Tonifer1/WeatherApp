@@ -11,20 +11,23 @@
     <script src="funktiot.js"></script>
 </head>
 
-<body>
+<body id ="all">
+    <button onclick="darkTheme()">Tumma teema</button>
+    <button onclick="lightTheme()">Vaalea teema</button>
 <center>
-<div id="weatherData">
-    <h2>Sää Data</h2>
+<div class="container" id="weatherData">
+    <h2>Sää</h2>
     <br>
     <button class="button" onclick="loadWeatherData('Helsinki')">Sää Helsinki</button>
     <button class="button" onclick="loadWeatherData('London')">Sää  Lontoo</button>
     <button class="button" onclick="loadWeatherData('Tampere')">Sää Tampere</button>
     
-    <table class="table table-dark table-hover"  id="myTable">
+    <table class="table table-dark table-hover" id="myTable">
         <thead>
             <tr>
                 <th>Kaupunki</th>
-                <th>Lämpötila (C)</th>
+                <th>Aika</th>
+                <th>Lämpötila (C)</th>                
                 <th>Sää</th>                
             </tr>
         </thead>
@@ -35,12 +38,12 @@
     
 </div>
 
-    <h3>Sääennuste</h3>
+    <h2>Sääennuste</h2>
     <br>
     <button class="button" onclick="loadForecast('Helsinki')"> Helsinki</button>
     <button class="button" onclick="loadForecast('Lontoo')"> Lontoo</button>
     <button class="button" onclick="loadForecast('Tampere')">Tampere</button>
-<div id="forecastData">    
+<div class="container" id="forecastData">    
     <table class="table table-dark table-hover" id="forecastTable">
         <thead>
             <tr>
