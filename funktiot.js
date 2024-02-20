@@ -66,3 +66,21 @@ function lightTheme() {
     document.getElementById("about").style.color = "black"
 
 }
+
+function searchWeather() {
+    
+    $('#myTable tbody').empty();
+
+    var city = document.getElementById('cityInput').value;
+    loadWeatherData(city);
+}
+
+
+
+function searchForecast() {
+    var city = document.getElementById('forecastCityInput').value;
+    loadForecast(city);
+}
+function clearTable() {
+    $('#myTable tbody').empty();
+}

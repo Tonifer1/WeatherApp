@@ -1,7 +1,7 @@
 
   .button {
     background-color:black; 
-    border: 2px solid #04AA6D;
+    border: 2px solid silver;
     color: white;
     padding: 6px 14px;
     text-align: center;
@@ -14,8 +14,44 @@
 }
 
 .button:hover {
-    background-color: green;
-    color: white;
+    background-color: rgb(204, 175, 11);
+    color: black;
+    border: 2px black;
+}
+
+.buttonTumma {
+  background-color:rgba(0, 0, 0, 0.61); 
+  border: 2px solid black;
+  color: whitesmoke;
+  padding: 6px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.buttonTumma:hover {
+  background-color: black;
+  color: white;
+}
+.buttonVaalea {
+  background-color:whitesmoke; 
+  border: 2px solid black;
+  color: black;
+  padding: 6px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.buttonVaalea:hover {
+  background-color: white;
+  color: black;
 }
 
 
