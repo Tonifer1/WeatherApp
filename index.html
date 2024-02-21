@@ -13,18 +13,18 @@
 </head>
 
 <body id="all">
-    <div class ="background-image2">
-        <button type="button" class="btn btn-dark" onclick="darkTheme()">Tumma teema</button>
-        <button type="button" class="btn btn-dark" onclick="lightTheme()">Vaalea teema</button>
-        <!-- <button class="buttonVaalea" onclick="lightTheme()">Vaalea teema</button> -->
-        
+    <div class ="background-etusivu" id="pageBackground">
+            <button type="button" class="btn btn-dark" onclick="lightTheme()">Vaalea teema</button>
+            <button type="button" class="btn btn-dark" onclick="darkTheme()">Tumma teema</button>
+            <a class="btn btn-dark" href="about.html">Tietoja</a>        
         <center>
             <div class="container" id="weatherData">
                 <h1 class="display-3">Sää</h1>
-                <br>            
+                     <br>     
                 <input type="text" id="cityInput" placeholder="Kaupunki">
-                <button class="button" onclick="searchWeather()">Hae säätiedot</button>
-                            
+                <button type="button" class="btn btn-dark btn-md" onclick="searchWeather()">Hae säätiedot</button>
+                <button type="button" class="btn btn-dark btn-md" onclick="clearInputAndTable()">Tyhjennä</button>
+                   <br><br>         
                 <table class="table table-dark table-hover" id="myTable">
                     <thead>
                         <tr>
@@ -41,8 +41,9 @@
             <h1 class ="display-3">Sääennuste</h1>
             <br>
             <input type="text" id="forecastCityInput" placeholder="Kaupunki">
-            <button class="button" onclick="searchForecast()">Hae sääennuste</button>
-            <br>
+            <button type="button" class="btn btn-dark btn-md"onclick="searchForecast()">Hae sääennuste</button>
+            <button type="button" class="btn btn-dark btn-md"onclick="clearWeatherInputAndTable()">Tyhjennä</button>
+            <br><br>
             <div class="container" id="forecastData">    
                 <table class="table table-dark table-hover" id="forecastTable">
                     <thead>
@@ -56,7 +57,7 @@
                     <tbody class="highlight2"></tbody>
                 </table> 
             </div> 
-            <a class="button" href="about.html">Tietoja</a>          
+                      
         </center>
     </div>
 </body>

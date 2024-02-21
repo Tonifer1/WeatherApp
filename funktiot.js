@@ -37,7 +37,8 @@ function loadForecast(city) {
         method: 'GET',
         success: function(response) {
             $('#forecastTable tbody').empty();
-            response.list.forEach(function(forecastData) {
+            var forecasts = response.list.slice(0, 10);
+            forecasts.forEach(function(forecastData) {
                 $('#forecastTable tbody').append(`
                     <tr>
                         <td>${response.city.name}</td>
@@ -59,38 +60,37 @@ function loadForecast(city) {
         
     });
 }
-function darkTheme() {
-        
-    theme = "dark"
-    document.getElementById("all").style.backgroundColor = "black"
-    var headings = document.getElementsByTagName("h1");
-    headings[0].style.color = "silver";
-    headings[1].style.color = "silver";
-    // headings[2].style.color = "silver";   
-    // document.getElementById("all").style.color = "silver"
-  
-}
+
 
 function lightTheme() {
-
-    theme = "light"
-    document.getElementById("all").style.backgroundColor = "whitesmoke"
+    // taustakuva vaalea teema
+    var lightThemeImage = "images/taivasVaalea.jpg";            //Image taivasVaalea
     var headings = document.getElementsByTagName("h1");
     headings[0].style.color = "black";
     headings[1].style.color = "black";
-    // headings[2].style.color = "black";   
-    // document.getElementById("all").style.color = "black"
-
+    document.getElementById("pageBackground").style.backgroundImage = "url('" + lightThemeImage + "')";
 }
 
+
+function darkTheme() {
+    //  taustakuva tumma teema
+    var darkThemeImage = "images/Yötaivas2.jpg";              //Image Yötaivas2 
+    var headings = document.getElementsByTagName("h1");
+    headings[0].style.color = "silver";
+    headings[1].style.color = "silver";
+    document.getElementById("pageBackground").style.backgroundImage = "url('" + darkThemeImage + "')";
+}
+
+
 function searchWeather() {
-    // Tyhjennä edellisen haun data
+    // tyhjentää edellisen haun datan
     $('#myTable tbody').empty();
 
+// -----------Virheenhallintaa---------
     // Hae kaupungin nimi syötekentästä
     var city = document.getElementById('cityInput').value;
 
-    // Tarkista, onko syöte tyhjä
+    // Tarkistaa, onko syöte tyhjä
     if (city.trim() === '') {
         alert('Syötä kaupungin nimi');
         return; // Lopeta toiminto, jos syöte on tyhjä
@@ -103,8 +103,6 @@ function searchWeather() {
 }
 
 
-
-
 function searchForecast() {
     $('#myTable tbody').empty();
     var city = document.getElementById('forecastCityInput').value;
@@ -114,5 +112,20 @@ function searchForecast() {
     }
     loadForecast(city);
 }
+
+
+// Tyhjennä syötekenttä ja taulu
+function clearInputAndTable() {
+    document.getElementById('cityInput').value = '';    
+    $('#myTable tbody').empty();
+}
+
+// Tyhjennä syötekenttä ja taulu
+function clearWeatherInputAndTable() {
+    document.getElementById('forecastCityInput').value = ''; 
+    $('#forecastTable tbody').empty();
+}
+
+
 
 

@@ -1,69 +1,13 @@
 
-  .button {
-    background-color:black; 
-    border: 2px solid silver;
-    color: white;
-    padding: 6px 14px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
+/*-----------index.html---------*/
 
-.button:hover {
-    background-color: rgb(204, 175, 11);
-    color: black;
-    border: 2px black;
-}
-
-.buttonTumma {
-  background-color:rgba(0, 0, 0, 0.61); 
-  border: 2px solid black;
-  color: whitesmoke;
-  padding: 6px 14px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-/* .buttonTumma:hover {
-  background-color: black;
-  color: white;
-} */
-.buttonVaalea {
-  background-color:whitesmoke; 
-  border: 2px solid black;
-  color: black;
-  padding: 6px 14px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-.buttonVaalea:hover {
-  background-color: white;
-  color: black;
-}
-
-
-
-
-.background-image {
-  background-color: #f8f9fa; /* Varmista, että taustaväri on kontrastinen kuvan kanssa */
+.background-etusivu {
+  background-color: #f8f9fa; 
   margin: 0; /* Poista sivun reunus */
   padding: 0; /* Poista sivun marginaali */
 }
 
-.background-image {
+.background-etusivu {
   position: absolute;
   top: 0;
   left: 0;
@@ -71,19 +15,22 @@
   height: 100%;
   z-index: -1; /* Aseta taustakuva taakse muihin elementteihin nähden */
   
-  background-image: url('images/taivas3.jpg');
+  background-image: url('images/taivasVaalea.jpg');
   background-size: cover; /* Skaalaa kuva kattamaan koko taustan */
   background-position: center; /* Aseta kuva keskelle taustaa */
   background-repeat: no-repeat; /* Estä kuvan toisto */
 }
 
-.background-image2 {
-  background-color: #f8f9fa; /* Varmista, että taustaväri on kontrastinen kuvan kanssa */
+/*-----------about.html---------*/
+
+
+.background-aboutSivu {
+  background-color: #f8f9fa; 
   margin: 0; /* Poista sivun reunus */
   padding: 0; /* Poista sivun marginaali */
 }
 
-.background-image2 {
+.background-aboutSivu {
   position: absolute;
   top: 0;
   left: 0;
@@ -91,7 +38,7 @@
   height: 100%;
   z-index: -1; /* Aseta taustakuva taakse muihin elementteihin nähden */
   
-  background-image: url('images/taivas1.jpg');
+  background-image: url('images/taivasAbout.jpg');                  
   background-size: cover; /* Skaalaa kuva kattamaan koko taustan */
   background-position: center; /* Aseta kuva keskelle taustaa */
   background-repeat: no-repeat; /* Estä kuvan toisto */
