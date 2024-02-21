@@ -71,7 +71,7 @@
   height: 100%;
   z-index: -1; /* Aseta taustakuva taakse muihin elementteihin nähden */
   
-  background-image: url('images/background.jpg');
+  background-image: url('images/taivas3.jpg');
   background-size: cover; /* Skaalaa kuva kattamaan koko taustan */
   background-position: center; /* Aseta kuva keskelle taustaa */
   background-repeat: no-repeat; /* Estä kuvan toisto */
