@@ -1,32 +1,9 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // Kutsutaan lightTheme-funktiota sivun latauksen jälkeen
+    lightTheme();
+});
 
-// function loadWeatherData(city) {
-//     $.ajax({
-//         url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=d493fdf9dabb2c2a8d6f2e1917f28438&units=metric',
-//         method: 'GET',
-//         success: function(response) {
-//             var currentTime = new Date(response.dt * 1000);
-//             var currentTimeString = currentTime.toLocaleTimeString();
-//             $('#myTable tbody').append(`
-//                 <tr>
-//                     <td>${response.name}</td>
-//                     <td>${currentTimeString}</td>
-//                     <td>${response.main.temp}</td>
-//                     <td>${response.weather[0].main}</td>
-//                 </tr>
-//             `);
-//         },
-//         error: function(xhr, status, error) {
-//             if(xhr.status === 404){
-//                 alert('Kaupunkia ei löytynyt, yritä uudelleen.');
-//             }
-//             else{
-//             console.error(status, error);
-//         }
-//         }
-//     });
-// }
-
-
+ 
 function loadWeatherData(city) {
     $.ajax({
         url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=d493fdf9dabb2c2a8d6f2e1917f28438&units=metric',
@@ -86,23 +63,23 @@ function darkTheme() {
         
     theme = "dark"
     document.getElementById("all").style.backgroundColor = "black"
-    var headings = document.getElementsByTagName("h2");
+    var headings = document.getElementsByTagName("h1");
     headings[0].style.color = "silver";
     headings[1].style.color = "silver";
-    headings[2].style.color = "silver";   
-    document.getElementById("about").style.color = "silver"
+    // headings[2].style.color = "silver";   
+    // document.getElementById("all").style.color = "silver"
   
 }
 
 function lightTheme() {
 
     theme = "light"
-    document.getElementById("all").style.backgroundColor = "white"
-    var headings = document.getElementsByTagName("h2");
+    document.getElementById("all").style.backgroundColor = "whitesmoke"
+    var headings = document.getElementsByTagName("h1");
     headings[0].style.color = "black";
     headings[1].style.color = "black";
-    headings[2].style.color = "black";   
-    document.getElementById("about").style.color = "black"
+    // headings[2].style.color = "black";   
+    // document.getElementById("all").style.color = "black"
 
 }
 
@@ -138,6 +115,4 @@ function searchForecast() {
     loadForecast(city);
 }
 
-// function clearTable() {
-//     $('#myTable tbody').empty();
-// }
+

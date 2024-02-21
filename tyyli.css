@@ -32,10 +32,10 @@
   transition-duration: 0.4s;
   cursor: pointer;
 }
-.buttonTumma:hover {
+/* .buttonTumma:hover {
   background-color: black;
   color: white;
-}
+} */
 .buttonVaalea {
   background-color:whitesmoke; 
   border: 2px solid black;
@@ -53,5 +53,51 @@
   background-color: white;
   color: black;
 }
+
+
+
+
+.background-image {
+  background-color: #f8f9fa; /* Varmista, että taustaväri on kontrastinen kuvan kanssa */
+  margin: 0; /* Poista sivun reunus */
+  padding: 0; /* Poista sivun marginaali */
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Aseta taustakuva taakse muihin elementteihin nähden */
+  
+  background-image: url('images/background.jpg');
+  background-size: cover; /* Skaalaa kuva kattamaan koko taustan */
+  background-position: center; /* Aseta kuva keskelle taustaa */
+  background-repeat: no-repeat; /* Estä kuvan toisto */
+}
+
+.background-image2 {
+  background-color: #f8f9fa; /* Varmista, että taustaväri on kontrastinen kuvan kanssa */
+  margin: 0; /* Poista sivun reunus */
+  padding: 0; /* Poista sivun marginaali */
+}
+
+.background-image2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Aseta taustakuva taakse muihin elementteihin nähden */
+  
+  background-image: url('images/taivas1.jpg');
+  background-size: cover; /* Skaalaa kuva kattamaan koko taustan */
+  background-position: center; /* Aseta kuva keskelle taustaa */
+  background-repeat: no-repeat; /* Estä kuvan toisto */
+}
+
+
+
 
 

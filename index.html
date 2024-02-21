@@ -13,50 +13,52 @@
 </head>
 
 <body id="all">
-    <button type="button" class="btn btn-dark" onclick="darkTheme()">Tumma teema</button>
-    <button type="button" class="btn btn-light" onclick="lightTheme()">Vaalea teema</button>
-    <!-- <button class="buttonVaalea" onclick="lightTheme()">Vaalea teema</button> -->
-    
-    <center>
-        <div class="container" id="weatherData">
-            <h2>Sää</h2>
-            <br>            
-            <input type="text" id="cityInput" placeholder="Kaupunki">
-            <button class="button" onclick="searchWeather()">Hae säätiedot</button>
-                        
-            <table class="table table-dark table-hover" id="myTable">
-                <thead>
-                    <tr>
-                        <th>Kaupunki</th>
-                        <th>Aika</th>
-                        <th>Lämpötila (C)</th>                
-                        <th>Sää</th>                
-                    </tr>
-                </thead>
-                <tbody class="highlight"></tbody>
-            </table>       
-        </div>
+    <div class ="background-image2">
+        <button type="button" class="btn btn-dark" onclick="darkTheme()">Tumma teema</button>
+        <button type="button" class="btn btn-light" onclick="lightTheme()">Vaalea teema</button>
+        <!-- <button class="buttonVaalea" onclick="lightTheme()">Vaalea teema</button> -->
+        
+        <center>
+            <div class="container" id="weatherData">
+                <h1 class="display-3">Sää</h1>
+                <br>            
+                <input type="text" id="cityInput" placeholder="Kaupunki">
+                <button class="button" onclick="searchWeather()">Hae säätiedot</button>
+                            
+                <table class="table table-dark table-hover" id="myTable">
+                    <thead>
+                        <tr>
+                            <th>Kaupunki</th>
+                            <th>Aika</th>
+                            <th>Lämpötila (C)</th>                
+                            <th>Sää</th>                
+                        </tr>
+                    </thead>
+                    <tbody class="highlight"></tbody>
+                </table>       
+            </div>
 
-        <h2>Sääennuste</h2>
-        <br>
-        <input type="text" id="forecastCityInput" placeholder="Kaupunki">
-        <button class="button" onclick="searchForecast()">Hae sääennuste</button>
-        <br>
-        <div class="container" id="forecastData">    
-            <table class="table table-dark table-hover" id="forecastTable">
-                <thead>
-                    <tr>
-                        <th>Kaupunki</th>
-                        <th>Aika</th>
-                        <th>Lämpötila (C)</th>
-                        <th>Sää</th>
-                    </tr>
-                </thead>
-                <tbody class="highlight2"></tbody>
-            </table> 
-        </div> 
-        <a class="button" href="about.html">Tietoja</a>          
-    </center>
+            <h1 class ="display-3">Sääennuste</h1>
+            <br>
+            <input type="text" id="forecastCityInput" placeholder="Kaupunki">
+            <button class="button" onclick="searchForecast()">Hae sääennuste</button>
+            <br>
+            <div class="container" id="forecastData">    
+                <table class="table table-dark table-hover" id="forecastTable">
+                    <thead>
+                        <tr>
+                            <th>Kaupunki</th>
+                            <th>Aika</th>
+                            <th>Lämpötila (C)</th>
+                            <th>Sää</th>
+                        </tr>
+                    </thead>
+                    <tbody class="highlight2"></tbody>
+                </table> 
+            </div> 
+            <a class="button" href="about.html">Tietoja</a>          
+        </center>
+    </div>
 </body>
 </html>
 
