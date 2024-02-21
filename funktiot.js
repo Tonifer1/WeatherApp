@@ -1,4 +1,32 @@
 
+// function loadWeatherData(city) {
+//     $.ajax({
+//         url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=d493fdf9dabb2c2a8d6f2e1917f28438&units=metric',
+//         method: 'GET',
+//         success: function(response) {
+//             var currentTime = new Date(response.dt * 1000);
+//             var currentTimeString = currentTime.toLocaleTimeString();
+//             $('#myTable tbody').append(`
+//                 <tr>
+//                     <td>${response.name}</td>
+//                     <td>${currentTimeString}</td>
+//                     <td>${response.main.temp}</td>
+//                     <td>${response.weather[0].main}</td>
+//                 </tr>
+//             `);
+//         },
+//         error: function(xhr, status, error) {
+//             if(xhr.status === 404){
+//                 alert('Kaupunkia ei löytynyt, yritä uudelleen.');
+//             }
+//             else{
+//             console.error(status, error);
+//         }
+//         }
+//     });
+// }
+
+
 function loadWeatherData(city) {
     $.ajax({
         url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=d493fdf9dabb2c2a8d6f2e1917f28438&units=metric',
@@ -16,10 +44,15 @@ function loadWeatherData(city) {
             `);
         },
         error: function(xhr, status, error) {
-            console.error(status, error);
+            if (xhr.status === 404) {
+                alert('Kaupunkia ei löytynyt, yritä uudelleen.');
+            } else {
+                console.error(status, error);
+            }
         }
     });
 }
+
 
 function loadForecast(city) {
     $.ajax({
@@ -39,8 +72,14 @@ function loadForecast(city) {
             });
         },
         error: function(xhr, status, error) {
-            console.error(status, error);
+            if (xhr.status === 404) {
+                alert('Kaupunkia ei löytynyt, yritä uudelleen.');
+            } else {
+                console.error(status, error);
+            }
+           
         }
+        
     });
 }
 function darkTheme() {
@@ -68,19 +107,37 @@ function lightTheme() {
 }
 
 function searchWeather() {
-    
+    // Tyhjennä edellisen haun data
     $('#myTable tbody').empty();
 
+    // Hae kaupungin nimi syötekentästä
     var city = document.getElementById('cityInput').value;
+
+    // Tarkista, onko syöte tyhjä
+    if (city.trim() === '') {
+        alert('Syötä kaupungin nimi');
+        return; // Lopeta toiminto, jos syöte on tyhjä
+    }
+
+
+    // Hae säätiedot, jos syöte on kelvollinen
+    else
     loadWeatherData(city);
 }
 
 
 
+
 function searchForecast() {
+    $('#myTable tbody').empty();
     var city = document.getElementById('forecastCityInput').value;
+    if (city.trim() === '') {
+        alert('Syötä kaupungin nimi');
+        return; // Lopeta toiminto, jos syöte on tyhjä
+    }
     loadForecast(city);
 }
-function clearTable() {
-    $('#myTable tbody').empty();
-}
+
+// function clearTable() {
+//     $('#myTable tbody').empty();
+// }
