@@ -44,6 +44,23 @@
   background-repeat: no-repeat; /* Estä kuvan toisto */
 }
 
+.forecast-container {
+  height: 300px; /* Aseta haluamasi korkeus */
+  overflow: auto; /* Mahdollista vieritys, jos sisältö ylittää korkeuden */
+  width: 68%
+}
+
+
+
+.table-scroll {
+  overflow-x: auto; /* Varmista vaakasuuntainen vieritys tarvittaessa */
+}
+
+ #forecastTable {
+  width: 100%; 
+}
+
+
 
 
 

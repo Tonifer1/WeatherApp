@@ -34,7 +34,7 @@
                             <th>Sää</th>                
                         </tr>
                     </thead>
-                    <tbody class="highlight"></tbody>
+                    <tbody></tbody>
                 </table>       
             </div>
 
@@ -44,18 +44,20 @@
             <button type="button" class="btn btn-dark btn-md"onclick="searchForecast()">Hae sääennuste</button>
             <button type="button" class="btn btn-dark btn-md"onclick="clearWeatherInputAndTable()">Tyhjennä</button>
             <br><br>
-            <div class="container" id="forecastData">    
-                <table class="table table-dark table-hover" id="forecastTable">
-                    <thead>
-                        <tr>
-                            <th>Kaupunki</th>
-                            <th>Aika</th>
-                            <th>Lämpötila (C)</th>
-                            <th>Sää</th>
-                        </tr>
-                    </thead>
-                    <tbody class="highlight2"></tbody>
-                </table> 
+            <div class="forecast-container" id="forecastData"> 
+                <div class="table-scroll"></div>   
+                    <table class="table table-dark table-hover" id="forecastTable">
+                        <thead>
+                            <tr>
+                                <th>Kaupunki</th>
+                                <th>Aika</th>
+                                <th>Lämpötila (C)</th>
+                                <th>Sää</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table> 
+            </div>
             </div> 
                       
         </center>

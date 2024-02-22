@@ -37,7 +37,7 @@ function loadForecast(city) {
         method: 'GET',
         success: function(response) {
             $('#forecastTable tbody').empty();
-            var forecasts = response.list.slice(0, 10);
+            var forecasts = response.list.slice(0,25);
             forecasts.forEach(function(forecastData) {
                 $('#forecastTable tbody').append(`
                     <tr>
