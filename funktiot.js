@@ -37,7 +37,7 @@ function loadForecast(city) {
         method: 'GET',
         success: function(response) {
             $('#forecastTable tbody').empty();
-            var forecasts = response.list.slice(0,25);
+            var forecasts = response.list.slice(0,30);
             forecasts.forEach(function(forecastData) {
                 $('#forecastTable tbody').append(`
                     <tr>
@@ -97,7 +97,7 @@ function searchWeather() {
     }
 
 
-    // Hae säätiedot, jos syöte on kelvollinen
+    // Hakee säätiedot, jos syöte on kelvollinen
     else
     loadWeatherData(city);
 }
@@ -108,23 +108,66 @@ function searchForecast() {
     var city = document.getElementById('forecastCityInput').value;
     if (city.trim() === '') {
         alert('Syötä kaupungin nimi');
-        return; // Lopeta toiminto, jos syöte on tyhjä
+        return; // Lopettaa toiminnon, jos syöte on tyhjä
     }
     loadForecast(city);
 }
 
+//-----------------Kenttien tyhjennys-----------------//
 
-// Tyhjennä syötekenttä ja taulu
 function clearInputAndTable() {
     document.getElementById('cityInput').value = '';    
     $('#myTable tbody').empty();
 }
 
-// Tyhjennä syötekenttä ja taulu
+
 function clearWeatherInputAndTable() {
     document.getElementById('forecastCityInput').value = ''; 
     $('#forecastTable tbody').empty();
 }
+
+//---------------DOM päivitys--------------------//
+function lisaaAboutOsa() {
+    
+    var aboutDiv = document.createElement('div');
+    aboutDiv.className = 'container';
+    aboutDiv.id = 'about';
+
+    
+    var title = document.createElement('h1');
+    title.textContent = 'Tietoja sovelluksesta';
+
+    var info1 = document.createElement('h3');
+    info1.innerHTML = '<strong>Tällä sivulla näkyvät avoimen datan sovellusliittymästä haetut säätiedot.</strong>';
+
+    var info2 = document.createElement('h3');
+    info2.innerHTML = '<strong>Tiedot haetaan sääsovellusliittymästä osoitteesta <a href="https://openweathermap.org/" class="text-decoration-none">https://openweathermap.org/</a></strong>';
+
+    var info3 = document.createElement('h3');
+    info3.textContent = 'Näytettävät tiedot sisältävät eri kaupunkien lämpötila- ja sääolosuhteet.';
+
+    // Lisää sisällöt aboutDiv-elementtiin
+    aboutDiv.appendChild(title);
+    aboutDiv.appendChild(info1);
+    aboutDiv.appendChild(info2);
+    aboutDiv.appendChild(info3);
+
+    
+    var targetElement = document.getElementById('Tietoja'); 
+
+    
+    targetElement.parentNode.insertBefore(aboutDiv, targetElement.nextSibling);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

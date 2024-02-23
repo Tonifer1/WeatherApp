@@ -39,26 +39,36 @@
   z-index: -1; /* Aseta taustakuva taakse muihin elementteihin nähden */
   
   background-image: url('images/taivasAbout.jpg');                  
-  background-size: cover; /* Skaalaa kuva kattamaan koko taustan */
-  background-position: center; /* Aseta kuva keskelle taustaa */
-  background-repeat: no-repeat; /* Estä kuvan toisto */
+  background-size: cover; /* Skaalaa kuvan kattamaan koko taustan */
+  background-position: center; /* Asettaa kuva keskelle taustaa */
+  background-repeat: no-repeat; /* Estää kuvan toistumisen */
 }
 
 .forecast-container {
-  height: 300px; /* Aseta haluamasi korkeus */
-  overflow: auto; /* Mahdollista vieritys, jos sisältö ylittää korkeuden */
+  height: 300px; 
+  overflow: auto; 
   width: 68%
 }
 
 
 
 .table-scroll {
-  overflow-x: auto; /* Varmista vaakasuuntainen vieritys tarvittaessa */
+  overflow-x: auto; /*  vaakasuuntainen vieritys tarvittaessa */
 }
 
  #forecastTable {
   width: 100%; 
 }
+
+
+#about h1, #about h3 {
+  color: white;
+}
+
+#about2 h1, #about2 h3 {
+  color:black;
+}
+
 
 
 
