@@ -47,7 +47,7 @@
 .forecast-container {
   height: 300px; 
   overflow: auto; 
-  width: 68%
+  width: 100%
 }
 
 
@@ -62,12 +62,23 @@
 
 
 #about h1, #about h3 {
-  color: white;
+  color:white;
 }
 
 #about2 h1, #about2 h3 {
   color:black;
 }
+
+
+#about {
+  position: relative;
+  
+  bottom: 0;
+  
+}
+
+
+
 
 
 
