@@ -1,6 +1,17 @@
 
 /*-----------index.html---------*/
 
+/* Vaalean teeman tekstille */
+.light-theme h1, .light-theme h3, .light-theme p {
+  color: black; /* Musta teksti vaaleassa teemassa */
+}
+
+/* Tumman teeman tekstille */
+.dark-theme h1, .dark-theme h3, .dark-theme p {
+  color: white; /* Valkoinen teksti tummassa teemassa */
+}
+
+
 .background-etusivu {
   background-color: #f8f9fa; 
   margin: 0; /* Poista sivun reunus */
@@ -24,25 +35,39 @@
 /*-----------about.html---------*/
 
 
+.background-aboutSivu {              
+  background-image: url('images/taivasAbout.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  min-height: 100vh;
+} 
+
+/*
 .background-aboutSivu {
   background-color: #f8f9fa; 
-  margin: 0; /* Poista sivun reunus */
-  padding: 0; /* Poista sivun marginaali */
+  margin: 0; 
+  padding: 0; 
 }
+  */
 
+/*
 .background-aboutSivu {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Aseta taustakuva taakse muihin elementteihin nähden */
+  z-index: -1; 
   
   background-image: url('images/taivasAbout.jpg');                  
-  background-size: cover; /* Skaalaa kuvan kattamaan koko taustan */
-  background-position: center; /* Asettaa kuva keskelle taustaa */
-  background-repeat: no-repeat; /* Estää kuvan toistumisen */
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
+*/
+
 
 .forecast-container {
   height: 300px; 
@@ -70,11 +95,27 @@
 }
 
 
+/*lisätty 3.9.2024*/
 #about {
   position: relative;
   
   bottom: 0;
+  overflow: auto; /* Varmistaa, että sisältö on vieritettävissä */
+  margin-top: 20px; /* Lisää marginaalia yläpuolelle */
   
+}
+/*Lisätty 11.9 2024
+.container {
+  max-width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  */
+
+
+@media (max-width: 768px) {
+  #about h1, #about h3 {
+      font-size: 1.2rem; /* Pienennä fonttikokoa pienemmillä näytöillä */
+  }
 }
 
 

@@ -68,7 +68,15 @@ function loadForecast(city) {
 }
 
 //---------------DOM päivitys--------------------//
-function lisaaAboutOsa() {
+
+     function lisaaAboutOsa() {
+    // Tarkistetaan, onko elementti jo olemassa
+    if (document.getElementById('about')) {
+        return; // Jos elementti on jo olemassa, ei tehdä mitään
+    }
+
+    // Vaihdetaan taustakuva
+    //document.getElementById("pageBackground").style.backgroundImage = "url('images/taivasVaalea.jpg')";
     
     var aboutDiv = document.createElement('div');
     aboutDiv.className = 'container';
@@ -93,6 +101,18 @@ function lisaaAboutOsa() {
     aboutDiv.appendChild(info2);
     aboutDiv.appendChild(info3);
 
+     // Tarkistetaan, onko käytössä tumma vai vaalea teema
+     if (document.body.classList.contains('light-theme')) {
+        title.style.color = "black";  // Vaalea teema -> musta teksti
+        info1.style.color = "black";
+        info2.style.color = "black";
+        info3.style.color = "black";
+    } else if (document.body.classList.contains('dark-theme')) {
+        title.style.color = "white";  // Tumma teema -> valkoinen teksti
+        info1.style.color = "white";
+        info2.style.color = "white";
+        info3.style.color = "white";
+    }
     
     var targetElement = document.getElementById('Tietoja'); 
 
@@ -103,33 +123,48 @@ function lisaaAboutOsa() {
 // Alusta muuttuja nykyisen teeman tilalle
 // var currentTheme = 'light'; // Oletusarvo on vaalea teema
 
-function lightTheme() {
+//function lightTheme() {
     // taustakuva vaalea teema
-    var lightThemeImage = "images/taivasVaalea.jpg";            //Image taivasVaalea
-    var headings = document.getElementsByTagName("h1");
-    headings[0].style.color = "black";
-    headings[1].style.color = "black";
-    document.getElementById("pageBackground").style.backgroundImage = "url('" + lightThemeImage + "')";
+    // var lightThemeImage = "images/taivasVaalea.jpg";            //Image taivasVaalea
+    // var headings = document.getElementsByTagName("h1");
+    // headings[0].style.color = "black";
+    // headings[1].style.color = "black";
+    // document.getElementById("pageBackground").style.backgroundImage = "url('" + lightThemeImage + "')";
 
     // Muuta Tietoja-osion tyyliä vaalean teeman mukaan
     //var aboutElement = document.getElementById("about");
     // aboutElement.style.backgroundColor = "#f8f9fa"; // Vaalean teeman taustaväri
     //aboutElement.style.color = "black"; // Vaalean teeman tekstiväri
+//}
+
+// function darkTheme() {
+//     //  taustakuva tumma teema
+//     var darkThemeImage = "images/Yötaivas2.jpg";              //Image Yötaivas2 
+//     var headings = document.getElementsByTagName("h1");
+//     headings[0].style.color = "silver";
+//     headings[1].style.color = "silver";
+//     document.getElementById("pageBackground").style.backgroundImage = "url('" + darkThemeImage + "')";
+
+//     // Muuta Tietoja-osion tyyliä tumman teeman mukaan
+//     //var aboutElement = document.getElementById("about");
+//     // aboutElement.style.backgroundColor = "#343a40"; // Tumman teeman taustaväri
+//     // aboutElement.style.color = "white"; // Tumman teeman tekstiväri
+// }
+
+function lightTheme() {
+    var lightThemeImage = "images/taivasVaalea.jpg";
+    document.getElementById("pageBackground").style.backgroundImage = "url('" + lightThemeImage + "')";
+    document.body.classList.remove("dark-theme");
+    document.body.classList.add("light-theme");
 }
 
 function darkTheme() {
-    //  taustakuva tumma teema
-    var darkThemeImage = "images/Yötaivas2.jpg";              //Image Yötaivas2 
-    var headings = document.getElementsByTagName("h1");
-    headings[0].style.color = "silver";
-    headings[1].style.color = "silver";
+    var darkThemeImage = "images/Yötaivas2.jpg";
     document.getElementById("pageBackground").style.backgroundImage = "url('" + darkThemeImage + "')";
-
-    // Muuta Tietoja-osion tyyliä tumman teeman mukaan
-    //var aboutElement = document.getElementById("about");
-    // aboutElement.style.backgroundColor = "#343a40"; // Tumman teeman taustaväri
-    // aboutElement.style.color = "white"; // Tumman teeman tekstiväri
+    document.body.classList.remove("light-theme");
+    document.body.classList.add("dark-theme");
 }
+
 
 
 
