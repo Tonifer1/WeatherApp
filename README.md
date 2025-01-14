@@ -1,4 +1,4 @@
-This Weather App provides real-time weather data and forecasts for cities worldwide using the OpenWeatherMap API. Users can:
+### This Weather App provides real-time weather data and forecasts for cities worldwide using the OpenWeatherMap API. Users can:
 
 View the current weather conditions such as temperature and weather description.
 Search for weather forecasts in any city.
